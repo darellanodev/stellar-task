@@ -19,4 +19,13 @@ describe('NavBarComponent', () => {
     const logo = fixture.nativeElement.querySelector('.navbar-brand');
     expect(logo.textContent).toContain('Stellar Task');
   });
+
+  it('show display the menu items', () => {
+    component.items = ['Home', 'Tasks'];
+    fixture.detectChanges();
+    const items = fixture.nativeElement.querySelectorAll('.nav-link');
+    expect(items.length).toBe(2);
+    expect(items[0].textContent).toBe('Home');
+    expect(items[1].textContent).toBe('Tasks');
+  });
 });

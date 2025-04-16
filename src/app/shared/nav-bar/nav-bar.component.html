@@ -1,1 +1,8 @@
-<div class="navbar-brand">{{ logo }}</div>
+<nav>
+    <div class="navbar-brand">{{ logo }}</div>
+    <ul>
+        <li *ngFor="let item of items">
+            <a href="#" class="nav-link">{{ item }}</a>
+        </li>
+    </ul>
+</nav>
