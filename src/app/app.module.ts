@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { NavBarComponent } from './shared/nav-bar/nav-bar.component'
+import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
+import { TaskComponent } from './task/components/task/task.component'
 
 @NgModule({
-  declarations: [AppComponent, NavBarComponent],
+  declarations: [AppComponent, NavBarComponent, TaskComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
