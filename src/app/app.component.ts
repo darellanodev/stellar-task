@@ -9,13 +9,31 @@ import { Task } from './task/models/task.model'
 export class AppComponent {
   title = 'stellar-task'
 
-  exampleTask: Task = {
+  examplePendingTask: Task = {
     id: '1',
-    description: 'Implement TDD approach',
+    description: 'Design the app logo',
     createdBy: 'darellanodev',
     assignedTo: 'darellanodev',
     requestedBy: 'darellanodev',
     status: 'pending',
+    createdAt: new Date(),
+  }
+  exampleInProgressTask: Task = {
+    id: '2',
+    description: 'Implement the logout button',
+    createdBy: 'darellanodev',
+    assignedTo: 'darellanodev',
+    requestedBy: 'darellanodev',
+    status: 'in-progress',
+    createdAt: new Date(),
+  }
+  exampleCompletedTask: Task = {
+    id: '3',
+    description: 'Design the wireframe for the about page',
+    createdBy: 'darellanodev',
+    assignedTo: 'darellanodev',
+    requestedBy: 'darellanodev',
+    status: 'completed',
     createdAt: new Date(),
   }
 }

@@ -1,7 +1,9 @@
 <app-nav-bar [logo]="'Stellar Task'" [items]="['Home','Tasks','Profile']"></app-nav-bar>
 
 <main>
-  <app-task [task]="exampleTask"></app-task>
+  <app-task [task]="examplePendingTask"></app-task>
+  <app-task [task]="exampleInProgressTask"></app-task>
+  <app-task [task]="exampleCompletedTask"></app-task>
 </main>
 
 <router-outlet></router-outlet>
