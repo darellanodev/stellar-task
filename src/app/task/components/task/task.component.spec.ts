@@ -38,4 +38,10 @@ describe('taskComponent', () => {
     const badge = compiled.querySelector('.status-badge')
     expect(badge.classList).toContain('status-pending')
   })
+
+  it('it should display the id of the task', () => {
+    const compiled = fixture.nativeElement
+    const id = compiled.querySelector('.task-id').textContent
+    expect(id).toContain(exampleTask.id)
+  })
 })
