@@ -9,3 +9,14 @@ A simple application to manage projects, to learn Angular and TDD.
 ## Github repository
 
 - <https://github.com/darellanodev/stellar-task>
+
+## This application follows a feature-based structure
+
+```bash
+src/app/
+├── task/
+│   ├── components/
+│   ├── models/
+│   ├── services/
+│   └── task.module.ts
+```
