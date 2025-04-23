@@ -14,7 +14,7 @@ describe('taskComponent', () => {
     assignedTo: 'darellanodev',
     requestedBy: 'darellanodev',
     status: 'pending',
-    createdAt: new Date(),
+    createdAt: new Date('2025-04-14T00:00:00.000Z'),
   }
 
   beforeEach(async () => {
@@ -56,6 +56,8 @@ describe('taskComponent', () => {
 
   it('it should display the creation date of the task', () => {
     const createdAt = compiled.querySelector('.task-createdAt').textContent
-    expect(createdAt).toContain(exampleTask.createdAt)
+    expect(new Date(createdAt).toDateString()).toBe(
+      exampleTask.createdAt.toDateString()
+    )
   })
 })
