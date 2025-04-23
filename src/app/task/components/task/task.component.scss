@@ -1,3 +1,12 @@
+:host {
+  display: block;
+  background-color: lightslategray;
+  margin: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: solid 1px;
+}
+
 .task-container {
   display: flex;
   gap: 1.5rem;
