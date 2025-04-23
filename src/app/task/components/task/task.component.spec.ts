@@ -5,6 +5,7 @@ import { Task } from '../../models/task.model'
 describe('taskComponent', () => {
   let fixture: ComponentFixture<TaskComponent>
   let component: TaskComponent
+  let compiled: any
 
   const exampleTask: Task = {
     id: '1',
@@ -25,23 +26,21 @@ describe('taskComponent', () => {
     component = fixture.componentInstance
     component.task = exampleTask
     fixture.detectChanges()
+    compiled = fixture.nativeElement
   })
 
   it('should display the task description', () => {
-    const compiled = fixture.nativeElement
     const textContent = compiled.querySelector('.task-description').textContent
     expect(textContent).toContain(exampleTask.description)
   })
 
   it('should show status with the correct class', () => {
-    const compiled = fixture.nativeElement
     const badge = compiled.querySelector('.status-badge')
     expect(badge.classList).toContain('status-pending')
   })
 
-  it('it should display the id of the task', () => {
-    const compiled = fixture.nativeElement
-    const id = compiled.querySelector('.task-id').textContent
-    expect(id).toContain(exampleTask.id)
+  it('it should display the creator of the task', () => {
+    const createdBy = compiled.querySelector('.task-createdBy').textContent
+    expect(createdBy).toContain(exampleTask.createdBy)
   })
 })

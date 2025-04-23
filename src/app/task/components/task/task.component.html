@@ -1,5 +1,6 @@
 <div>
   <span class="task-id">{{ task.id }}</span>
+  <span class="task-createdBy">{{ task.createdBy }}</span>
   <span class="task-description">{{ task.description }}</span>
   <span class="status-badge" [ngClass]="'status-'+task.status.toLowerCase()">{{ task.status }}</span>
 </div>
