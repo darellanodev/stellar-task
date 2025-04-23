@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core'
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./nav-bar.component.scss'],
 })
 export class NavBarComponent {
-  @Input() logo = '';
-  @Input() items: string[] = [];
+  @Input() logo = ''
+  @Input() items: string[] = []
 }
