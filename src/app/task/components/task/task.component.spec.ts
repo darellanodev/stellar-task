@@ -32,4 +32,10 @@ describe('taskComponent', () => {
     const textContent = compiled.querySelector('.task-description').textContent
     expect(textContent).toContain(exampleTask.description)
   })
+
+  it('should show status with the correct class', () => {
+    const compiled = fixture.nativeElement
+    const badge = compiled.querySelector('.status-badge')
+    expect(badge.classList).toContain('status-pending')
+  })
 })
