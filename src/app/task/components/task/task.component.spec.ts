@@ -53,4 +53,9 @@ describe('taskComponent', () => {
     const requestedBy = compiled.querySelector('.task-requestedBy').textContent
     expect(requestedBy).toContain(exampleTask.requestedBy)
   })
+
+  it('it should display the creation date of the task', () => {
+    const createdAt = compiled.querySelector('.task-createdAt').textContent
+    expect(createdAt).toContain(exampleTask.createdAt)
+  })
 })
