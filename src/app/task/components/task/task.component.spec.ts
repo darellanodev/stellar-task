@@ -48,4 +48,9 @@ describe('taskComponent', () => {
     const assignedTo = compiled.querySelector('.task-assignedTo').textContent
     expect(assignedTo).toContain(exampleTask.assignedTo)
   })
+
+  it('it should display the requested person of the task', () => {
+    const requestedBy = compiled.querySelector('.task-requestedBy').textContent
+    expect(requestedBy).toContain(exampleTask.requestedBy)
+  })
 })
