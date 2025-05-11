@@ -20,12 +20,19 @@ describe('NavBarComponent', () => {
     expect(logo.textContent).toContain('Stellar Task')
   })
 
-  it('show display the menu items', () => {
+  it('show display the menu items without icons', () => {
     component.items = ['Home', 'Tasks']
     fixture.detectChanges()
     const items = fixture.nativeElement.querySelectorAll('.nav-link')
     expect(items.length).toBe(2)
     expect(items[0].textContent).toBe('Home')
     expect(items[1].textContent).toBe('Tasks')
+  })
+
+  it('show display a menu item with an icon', () => {
+    component.items = ['user#Profile']
+    fixture.detectChanges()
+    const items = fixture.nativeElement.querySelectorAll('.nav-link')
+    expect(items[0].textContent).toBe('<i class="fas fa-user"></i> Profile')
   })
 })

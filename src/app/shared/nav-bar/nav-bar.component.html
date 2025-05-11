@@ -1,8 +1,8 @@
 <nav>
-    <div class="navbar-brand">{{ logo }}</div>
-    <ul>
-        <li *ngFor="let item of items">
-            <a href="#" class="nav-link">{{ item }}</a>
-        </li>
-    </ul>
+  <div class="navbar-brand">{{ logo }}</div>
+  <ul>
+    <li *ngFor="let item of items">
+      <a href="#" class="nav-link">{{ getItem(item) }}</a>
+    </li>
+  </ul>
 </nav>
