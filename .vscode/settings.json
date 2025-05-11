@@ -22,6 +22,11 @@
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "cSpell.words": [
-    "darellanodev"
+    "bazel",
+    "darellanodev",
+    "fontawesome",
+    "fortawesome",
+    "libpeerconnection",
+    "testem"
   ]
 }
