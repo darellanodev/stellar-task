@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { Task } from './task/models/task.model'
+import { Day } from './day/models/day.model'
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ export class AppComponent {
     status: 'pending',
     createdAt: new Date(),
   }
+
   exampleInProgressTask: Task = {
     id: '2',
     description: 'Implement the logout button',
@@ -27,6 +29,7 @@ export class AppComponent {
     status: 'in-progress',
     createdAt: new Date(),
   }
+
   exampleCompletedTask: Task = {
     id: '3',
     description: 'Design the wireframe for the about page',
@@ -35,5 +38,14 @@ export class AppComponent {
     requestedBy: 'darellanodev',
     status: 'completed',
     createdAt: new Date(),
+  }
+
+  exampleDay: Day = {
+    date: new Date('2025-05-15'),
+    tasks: [
+      this.examplePendingTask,
+      this.exampleInProgressTask,
+      this.exampleCompletedTask,
+    ],
   }
 }
