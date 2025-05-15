@@ -1,3 +1,6 @@
 <div class="day">
   <div class="day-date">{{ day.date | date: 'yyyy-MM-dd' }}</div>
+  <div class="tasks-list">
+    <app-task *ngFor="let task of day.tasks" [task]="task"></app-task>
+  </div>
 </div>

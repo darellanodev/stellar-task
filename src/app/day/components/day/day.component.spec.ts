@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { DayComponent } from './day.component'
 import { Day } from '../../models/day.model'
+import { TaskComponent } from 'src/app/task/components/task/task.component'
 
 describe('DayComponent', () => {
   let component: DayComponent
@@ -24,7 +25,7 @@ describe('DayComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DayComponent],
+      declarations: [DayComponent, TaskComponent],
     }).compileComponents()
 
     fixture = TestBed.createComponent(DayComponent)
@@ -37,5 +38,10 @@ describe('DayComponent', () => {
   it('should display the date', () => {
     const date = compiled.querySelector('.day-date')?.textContent
     expect(date).toContain('2025-05-15')
+  })
+
+  it('should render a list of tasks', () => {
+    const totalTasks = compiled.querySelectorAll('app-task').length
+    expect(totalTasks).toBe(1)
   })
 })
